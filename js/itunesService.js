@@ -17,7 +17,15 @@ angular.module('itunes').service('itunesService', function($http){
         var result =response.data.results;
         for (var i = 0; i < result.length; i++) {
           if (result[i].artistName !== 'Undefined'){
-            myFinalArray.push({AlbumArt: result[i].artworkUrl100, Artist: result[i].artistName, Collection: result[i].collectionName, CollectionPrice: result[i].collectionPrice, Play: result[i].previewUrl, Type: result[i].kind});
+            myFinalArray.push
+            ({
+              AlbumArt: result[i].artworkUrl100, 
+              Artist: result[i].artistName, 
+              Collection: result[i].collectionName, 
+              CollectionPrice: result[i].collectionPrice, 
+              Play: result[i].previewUrl, 
+              Type: result[i].kind
+            });
           }  
         };
         return myFinalArray;
